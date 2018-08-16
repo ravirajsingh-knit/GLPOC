@@ -2,28 +2,9 @@
 @import url('http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,600,700,800|Lato:100,400,300,700');
 /* --- pe-icon-7-stroke --- */
 
-/*sidenav*/
-.sidenav {
-    width: 160px; /* Set the width of the sidebar */
-    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-    z-index: 1; /* Stay on top */
-  /* Stay at the top */
-    left: 0;
-  	background:#333;
-    overflow-x: hidden; /* Disable horizontal scroll */
-    margin-left: 30px
-    /*padding-top: 20px;*/
+.cc{
+	background-color: #000;
 }
-
-/* The navigation menu links */
-.sidenav a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-}
-
 
 
 
