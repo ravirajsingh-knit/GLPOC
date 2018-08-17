@@ -11,15 +11,20 @@ app.service('DataFactory',function(){
 		this.empdata.push(emp);
 		return true;
 	}
+
 	this.delete=function(id){
+		console.log(id);
 		for(var i=0;i<this.empdata.length;i++){
 			if(id==this.empdata[i].empid){
-				this.empdata.splice(i,i+1);
+				console.log(i);
+				this.empdata.splice(i,1);
 				break;
 			}
 		}
+		console.log(this.empdata);
 		return this.empdata;
 	}
+
 	this.setData=function(data){
 		for(var i=0;i<this.empdata.length;i++){
 			if(this.empdata[i].empid==data.empid){
