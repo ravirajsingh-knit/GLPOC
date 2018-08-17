@@ -21,7 +21,7 @@ app.config(function($routeProvider){
                     templateUrl:"pages/mod3.html",
                     controller: 'mod3Ctrl'
                 })
-                .otherwise("/intro.html");
+                .otherwise("/");
     
 });
 

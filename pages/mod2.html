@@ -1,29 +1,27 @@
 
 <div  ng-controller="mod2Ctrl" class="container">
 <div class="row">
-<div class="sidebar-wrapper col-sm-2 cc" >
-	<nav id="spy">
-		<ul class="sidebar-nav nav">
-			<li>
-				<a class="btn" ng-click="changeTextE()">E</a>
-			</li>	
-  			<li>
-  				<a class="btn" ng-click="changeTextF()">F</a>
-  			</li>
-  			<li>
-  				<a class="btn" ng-click="changeTextG()">G</a>
-  			</li>
-  			<li>
-  				<a class="btn" ng-click="changeTextH()">H</a>
-  			</li>
-  		</ul>
-	</nav>
-</div>
+<ul class="list-group">
+    <li class="list-group-item">Id							Name <span class="badge">Option</span></li>
+    <li class="list-group-item" ng-repeat="employe in employes">
+    	<a ng-click="viewData(employe.empid)">{{employe.empid}}							{{employe.name}}</a>
+    	<a class="btn btn-default badge" ng-click="edit(employe.empid)">Edit</a>
+    	<a class="btn btn-default badge" ng-click="delete(employe.empid)">Delete</a>
+    	<ul ng-show="showdata==employe.empid">
+    		<li>Age   &nbsp;{{employe.age}}</li>
+    		<li>Mobile &nbsp;{{employe.mobile}}</li>
+    		<li>Address &nbsp;{{employe.address}}</li>
+    		<li>Project &nbsp;{{employe.project}}</li>
+    	</ul>
+    	<ul ng-show="editdata==employe.empid">
+    		<li><label for="age">Age</label>&nbsp;<input name="age" type="number" ng-model="employe.age"></li>
+    		<li><label for="mobile">Mobile</label>&nbsp;<input name="mobile" type="number" ng-model="employe.mobile"></li>
+    		<li><label for="address">Address</label>&nbsp;<input name="address" type="text" ng-model="employe.address"></li>
+    		<li><label for="project">Project</label>&nbsp;<input name="project" type="text" ng-model="employe.project"></li>
+    		<a class="btn btn-default cc" ng-click="editData(employe)">Submit</a>
+    	</ul>
+	</li>
+ </ul>
 
-<!-- Page content -->
-<div class="main" class="col-sm-offset-4 col-sm-7">
-      <h1>{{mod2Text}}</h1>
-
-</div>
 </div>
 </div>
