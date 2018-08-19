@@ -9,10 +9,6 @@ app.config(function($routeProvider){
                     templateUrl:"pages/intro.html",
                     //controller: 'mod1Ctrl'
                 })
-                .when("/mod1",{
-                    templateUrl:"pages/mod1.html",
-                    controller: "mod1Ctrl"
-                })
                 .when("/mod2",{
                     templateUrl:"pages/mod2.html",
                     controller: 'mod2Ctrl'

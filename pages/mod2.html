@@ -1,8 +1,7 @@
 
-<div  ng-controller="mod2Ctrl" class="container">
-<div class="row">
+<div  ng-controller="mod2Ctrl" >
 <ul class="list-group">
-    <li class="list-group-item">Id							Name <span class="badge">Option</span></li>
+    <li class="list-group-item">Id		Name <span class="badge">Option</span></li>
     <li class="list-group-item" ng-repeat="employe in employes">
     	<a ng-click="viewData(employe.empid)">{{employe.empid}}							{{employe.name}}</a>
     	<a class="btn btn-default badge" ng-click="edit(employe.empid)">Edit</a>
@@ -22,6 +21,4 @@
     	</ul>
 	</li>
  </ul>
-
-</div>
 </div>
