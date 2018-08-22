@@ -8,20 +8,14 @@
 </p>
 <p>EMPID:
 <input type="number" name="myEmpid" ng-model="empid" required>
-<span ng-show="myForm.myEmpid.$touched && myForm.myEmpid.$invalid">The name is required.</span>
+<span ng-show="myForm.myEmpid.$touched && myForm.myEmpid.$invalid">The empid is required.</span>
 </p>
-<input type="submit"
-ng-disabled=" myForm.myName.$error.required ||  myForm.myEmpid.$error.required" >
+<button type="submit"
+ng-disabled=" myForm.myName.$error.required ||  myForm.myEmpid.$error.required" >Submit</button>
 <!-- <p>value:{{myForm.myName.$dirty}}</p> -->
 </form>
 
-
-<div ng-show='show'>
-  <ul>
-    <li ng-repeat="emp in employes track by $index"> {{emp.name}}                {{emp.empid}}</li>
-  </ul>
-
-</div> 
+<h1 ng-hide="showMessage">User Data Entered</h1>
 
 
 
