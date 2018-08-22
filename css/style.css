@@ -1,11 +1,19 @@
+.present{
+	font-size: 12px;
+	font-weight: bold;
+}
+.cc{
+	font-size: 16px;
+	color: #000;
+	background-color: #000;
+}
+
+
 /* ==== Google font ==== */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,600,700,800|Lato:100,400,300,700');
 /* --- pe-icon-7-stroke --- */
 ul {
   list-style: none;
-}
-.cc{
-	background-color: #000;
 }
 
 
@@ -869,11 +877,11 @@ footer .sub-footer  p {
 	font-size: 14px;
 }
 
-ul.social {
+ul {
 	list-style: none;
 	padding-left: 0;
 }
-ul.social li {
+ul li {
 	display: inline;
 	margin-right: 5px;
 }

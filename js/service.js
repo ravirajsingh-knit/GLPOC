@@ -32,20 +32,30 @@ app.service('DataFactory',function(){
 				this.empdata[i].mobile=data.mobile;
 				this.empdata[i].address=data.address;
 				this.empdata[i].project=data.project;
-				break;
+				return this.empdata[i];
 			}
 		}
 		return this.empdata;
 	}
-
+	this.getNames=function(){
+		var data=[];
+		for(var i=0;i<this.empdata.length;i++){
+			var temp={};
+			temp.empid=this.empdata[i].empid;
+			temp.name=this.empdata[i].name;
+			data.push(temp);
+		}
+		return data;
+	}
 	this.getAllData=function(){
 		return this.empdata;
 	}
 
-	this.getData=function(id){
+	this.getUserData=function(id){
 		for(var  i=0;i<this.empdata.length;i++){
-			if(this.empdata[i].empid==data.empid){
-				return this.empdata[i]
+			if(this.empdata[i].empid==id){
+				console.log("get",this.empdata[i]);
+				return this.empdata[i];
 			}
 		}
 	}

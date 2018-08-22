@@ -1,23 +1,23 @@
 
-<div  ng-controller="mod2Ctrl" >
+<div  ng-controller="mod2Ctrl" class="present" >
 <ul class="list-group">
     <li class="list-group-item">Id		Name <span class="badge">Option</span></li>
     <li class="list-group-item" ng-repeat="employe in employes">
     	<a ng-click="viewData(employe.empid)">{{employe.empid}}							{{employe.name}}</a>
     	<a class="btn btn-default badge" ng-click="edit(employe.empid)">Edit</a>
     	<a class="btn btn-default badge" ng-click="delete(employe.empid)">Delete</a>
-    	<ul ng-show="showdata==employe.empid">
-    		<li>Age   &nbsp;{{employe.age}}</li>
-    		<li>Mobile &nbsp;{{employe.mobile}}</li>
-    		<li>Address &nbsp;{{employe.address}}</li>
-    		<li>Project &nbsp;{{employe.project}}</li>
+    	<ul class="list-group" ng-show="showdata==employe.empid">
+    		<li class="list-group-item">Age   &nbsp;{{employe.age}}</li>
+    		<li class="list-group-item">Mobile &nbsp;{{employe.mobile}}</li>
+    		<li class="list-group-item">Address &nbsp;{{employe.address}}</li>
+    		<li class="list-group-item">Project &nbsp;{{employe.project}}</li>
     	</ul>
-    	<ul ng-show="editdata==employe.empid">
-    		<li><label for="age">Age</label>&nbsp;<input name="age" type="number" ng-model="employe.age"></li>
-    		<li><label for="mobile">Mobile</label>&nbsp;<input name="mobile" type="number" ng-model="employe.mobile"></li>
-    		<li><label for="address">Address</label>&nbsp;<input name="address" type="text" ng-model="employe.address"></li>
-    		<li><label for="project">Project</label>&nbsp;<input name="project" type="text" ng-model="employe.project"></li>
-    		<a class="btn btn-default cc" ng-click="editData(employe)">Submit</a>
+    	<ul class="list-group" ng-show="editdata==employe.empid">
+    		<li class="list-group-item"><label for="age">Age</label>&nbsp;<input name="age" type="number" ng-model="data.age" value="employe.age"></li>
+    		<li class="list-group-item"><label for="mobile">Mobile</label>&nbsp;<input name="mobile" type="number" ng-model="data.mobile" value="employe.mobile"></li>
+    		<li class="list-group-item"><label for="address">Address</label>&nbsp;<input name="address" type="text" ng-model="data.address" value="employe.address"></li>
+    		<li class="list-group-item"><label for="project">Project</label>&nbsp;<input name="project" type="text" ng-model="data.project"  value="employe.project"></li>
+    		<a class="btn btn-default cc" ng-="editData(employe,data)">Submit</a>
     	</ul>
 	</li>
  </ul>
