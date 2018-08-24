@@ -10,15 +10,15 @@ app.config(function($routeProvider){
                     //controller: 'mod1Ctrl'
                 })
                 .when("/mod1",{
-                    templateUrl:"pages/mod1.html",
+                    templateUrl:"mod1/mod1.html",
                     controller: 'mod1Ctrl'
                 })
                 .when("/mod2",{
-                    templateUrl:"pages/mod2.html",
+                    templateUrl:"mod2/mod2.html",
                     controller: 'mod2Ctrl'
                 })
                 .when("/mod3",{
-                    templateUrl:"pages/mod3.html",
+                    templateUrl:"mod3/mod3.html",
                     controller: 'mod3Ctrl'
                 })
                 .otherwise("/");
