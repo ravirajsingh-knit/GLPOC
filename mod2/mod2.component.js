@@ -11,7 +11,7 @@ angular.module('mod2').component('mod2Display',{
 
         $scope.delete=function(id){
             console.log("delete "+id);
-            //$scope.employes=DataFactory.delete(id);
+            DataFactory.delete(id);
             for(var i=0;i<$scope.employes.length;i++){
                 if($scope.employes[i].empid==id){
                     $scope.employes.splice(i,1);
