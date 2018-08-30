@@ -1,0 +1,14 @@
+
+		<form name="myForm" ng-submit="formSubmit()" novalidate>
+			<p>Name:
+			<input name="myName" ng-model="username" required>
+			<span ng-show="myForm.myName.$touched && myForm.myName.$invalid">The name is required.</span>
+			</p>
+			<p>EMPID:
+			<input type="number" name="myEmpid" ng-model="empid" required>
+			<span ng-show="myForm.myEmpid.$touched && myForm.myEmpid.$invalid">The empid is required.</span>
+			</p>
+			<button type="submit"
+			ng-disabled=" myForm.myName.$error.required ||  myForm.myEmpid.$error.required" >Submit</button>
+		</form>
+		<h1 ng-hide="showMessage">User Data Entered</h1>
