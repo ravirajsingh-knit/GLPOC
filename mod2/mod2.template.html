@@ -1,22 +1,25 @@
 <span style="display:inline-block; width:20px;"></span>
-<ul class="list-group">
-    <li class="list-group-item">Id		Name <span class="badge">Option</span></li>
-    <li class="list-group-item" ng-repeat="employe in employes">
-    	<a ng-click="viewData(employe.empid)">{{employe.empid}}							{{employe.name}}</a>
-    	<a class="btn btn-default badge" ng-click="edit(employe.empid)">Edit</a>
-    	<a class="btn btn-default badge" ng-click="delete(employe.empid)">Delete</a>
-    	<ul class="list-group" ng-show="employe.status==1">
-    		<li class="list-group-item">Age   &nbsp;{{employe.age}}</li>
-    		<li class="list-group-item">Mobile &nbsp;{{employe.mobile}}</li>
-    		<li class="list-group-item">Address &nbsp;{{employe.address}}</li>
-    		<li class="list-group-item">Project &nbsp;{{employe.project}}</li>
-    	</ul>
-    	<ul class="list-group" ng-show="employe.status==2">
-    		<li class="list-group-item"><label for="age">Age</label>&nbsp;<input name="age" type="number" ng-model="employe.age" ></li>
-    		<li class="list-group-item"><label for="mobile">Mobile</label>&nbsp;<input name="mobile" type="tel" maxlength="10" ng-model="employe.mobile" ></li>
-    		<li class="list-group-item"><label for="address">Address</label>&nbsp;<input name="address" type="text" ng-model="employe.address" ></li>
-    		<li class="list-group-item"><label for="project">Project</label>&nbsp;<input name="project" type="text" ng-model="employe.project" ></li>
-    		<a class="btn btn-default cc" ng-click="editData(employe)">Submit</a>
-    	</ul>
-	</li>
- </ul>
+<div ng-show="employes.length==0"><h1>"No employee Are ava."</h1></div>
+<div ng-show="employes.length!=0">
+	<ul class="list-group">
+		<li class="list-group-item">Id		Name <span class="badge">Option</span></li>
+		<li class="list-group-item" ng-repeat="employe in employes" class="thumbnail employee-list-item" >
+			<a ng-click="viewData(employe.empid)">{{employe.empid}}							{{employe.name}}</a>
+			<a class="btn btn-default badge" ng-click="edit(employe.empid)">Edit</a>
+			<a class="btn btn-default badge" ng-click="delete(employe.empid)">Delete</a>
+			<ul class="list-group" ng-show="employe.status==1">
+				<li class="list-group-item">Age   &nbsp;{{employe.age}}</li>
+				<li class="list-group-item">Mobile &nbsp;{{employe.mobile}}</li>
+				<li class="list-group-item">Address &nbsp;{{employe.address}}</li>
+				<li class="list-group-item">Project &nbsp;{{employe.project}}</li>
+			</ul>
+			<ul class="list-group" ng-show="employe.status==2">
+				<li class="list-group-item"><label for="age">Age</label>&nbsp;<input name="age" type="number" ng-model="employe.age" ></li>
+				<li class="list-group-item"><label for="mobile">Mobile</label>&nbsp;<input name="mobile" type="tel" maxlength="10" ng-model="employe.mobile" ></li>
+				<li class="list-group-item"><label for="address">Address</label>&nbsp;<input name="address" type="text" ng-model="employe.address" ></li>
+				<li class="list-group-item"><label for="project">Project</label>&nbsp;<input name="project" type="text" ng-model="employe.project" ></li>
+				<a class="btn btn-default cc" ng-click="editData(employe)">Submit</a>
+			</ul>
+		</li>
+	</ul>
+</div>
