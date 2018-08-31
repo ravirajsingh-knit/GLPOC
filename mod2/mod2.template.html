@@ -3,7 +3,7 @@
 <div ng-show="employes.length!=0">
 	<ul class="list-group">
 		<li class="list-group-item">Id		Name <span class="badge">Option</span></li>
-		<li class="list-group-item" ng-repeat="employe in employes" class="thumbnail employee-list-item" >
+		<li class="list-group-item employe-list-item" ng-repeat="employe in employes" >
 			<a ng-click="viewData(employe.empid)">{{employe.empid}}							{{employe.name}}</a>
 			<a class="btn btn-default badge" ng-click="edit(employe.empid)">Edit</a>
 			<a class="btn btn-default badge" ng-click="delete(employe.empid)">Delete</a>

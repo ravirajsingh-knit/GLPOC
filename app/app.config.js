@@ -1,5 +1,6 @@
-angular.module("app").config(function($routeProvider){
- $routeProvider.when("/home",{
+angular.module("app").config(function($locationProvider,$routeProvider){
+    $locationProvider.hashPrefix('');
+    $routeProvider.when("/home",{
                     template:"<h1>Welcome to Angular POC</h1>",
                     //controller:'introCtrl'
                 })
